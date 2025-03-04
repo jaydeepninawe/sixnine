@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  /* max-width: 500px; */
+  margin: auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+}
+
+h1 {
+  color: #ffcc00;
+}
+
+.balance {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.warning {
+  color: red;
+}
+
+.bet-input {
+  padding: 10px;
+  font-size: 18px;
+  width: 80%;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.roll-button {
+  background: #ffcc00;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.roll-button:hover {
+  background: #ffaa00;
+}
+
+.roll-button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.dice-animation {
+  font-size: 80px;
+  animation: rollAnimation 1s infinite linear;
+}
+
+@keyframes rollAnimation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hash {
+  margin-top: 15px;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  word-break: break-all; /* Ensures long hash values wrap properly */
+  text-align: center;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hash::before {
+  content: "🔗 Hash: ";
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+
+
+.fairness-section {
+  margin: 20px auto;
+  padding: 15px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.fairness-section p {
+  font-size: 16px;
+  margin: 5px 0;
+  word-break: break-all; /* Ensures long seeds wrap correctly */
+}
+
+.verify-button {
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.verify-button:hover {
+  background: #45a049;
+}
+
+.fairness-result {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00; /* Default fairness text color */
+}
+
+.fairness-result:before {
+  content: "🔍 ";
+}
+
+.fairness-result.fair {
+  color: #4caf50; /* Green for fair results */
+}
+
+.fairness-result.unfair {
+  color: #f44336; /* Red for unfair results */
+}
+
+
+.seed-container {
+  margin-top: 15px;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  word-break: break-all; /* Prevents overflow */
+  text-align: center;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.server-seed::before {
+  content: "🛡️ Server Seed: ";
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.client-seed::before {
+  content: "🔑 Client Seed: ";
+  font-weight: bold;
+  color: #ffcc00;
+}
