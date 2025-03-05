@@ -2,10 +2,12 @@
   "name": "six_nine",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+
   },
   "author": "",
   "license": "ISC",
